@@ -18,7 +18,7 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 
 # this installs a package from fedora repos 
 
-dnf5 -y group install --with-optional virtualization
+dnf -y group install --with-optional virtualization
 
 dnf5 -y install xcb-util-cursor # fix amnezia vpn work
 dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
