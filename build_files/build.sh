@@ -27,11 +27,11 @@ dnf5 -y remove firefox # instead install flathub version
 
 dnf5 -y install code
 
-dnf5 -y install curl cabextract xorg-x11-font-utils fontconfig
+# dnf5 -y install curl cabextract xorg-x11-font-utils fontconfig
 
-rpm --nodigest -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+# rpm --nodigest -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
 
-fc-cache -fv
+# fc-cache -fv
 
 dnf5 -y install wireshark
 
