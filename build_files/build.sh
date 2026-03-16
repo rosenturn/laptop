@@ -10,7 +10,30 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
+
+rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+
+# dnf5 -y check-update
+
+# this installs a package from fedora repos 
+
+dnf5 -y group install --with-optional virtualization
+
+dnf5 -y install xcb-util-cursor # fix amnezia vpn work
+dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
+
+dnf5 -y remove firefox # instead install flathub version
+
+dnf5 -y install code
+
+dnf5 -y install curl cabextract xorg-x11-font-utils fontconfig
+
+rpm --nodigest -i https://downloads.sourceforge.net/project/mscorefonts2/rpms/msttcore-fonts-installer-2.6-1.noarch.rpm
+
+fc-cache -fv
+
+dnf5 -y install wireshark
 
 # Use a COPR Example:
 #
