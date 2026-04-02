@@ -15,6 +15,10 @@ set -ouex pipefail
 
 # this installs a package from fedora repos 
 
+dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+dnf5 -y config-manager setopt fedora-cisco-openh264.enabled=1
+
+
 dnf5 -y remove firefox # instead install flathub version
 
 # dnf5 -y copr enable deltacopy/darkly
