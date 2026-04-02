@@ -11,12 +11,11 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 
-#rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
-#echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
-
 # dnf5 -y check-update
 
 # this installs a package from fedora repos 
+
+dnf5 -y remove firefox # instead install flathub version
 
 dnf5 -y copr enable deltacopy/darkly
 dnf5 -y install darkly
@@ -29,10 +28,14 @@ dnf5 -y copr disable matinlotfali/KDE-Rounded-Corners
 dnf5 -y group install --with-optional virtualization
 
 #dnf5 -y install xcb-util-cursor # fix amnezia vpn work
-dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
+#dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
 dnf5 -y install wireshark
 
-dnf5 -y remove firefox # instead install flathub version
+dnf5 -y install steam
+
+rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+
 
 # dnf5 -y install code
 
