@@ -18,6 +18,14 @@ set -ouex pipefail
 
 # this installs a package from fedora repos 
 
+dnf5 copr enable deltacopy/darkly
+dnf5 -y install darkly
+dnf5 copr disable deltacopy/darkly
+
+dnf5 copr enable matinlotfali/KDE-Rounded-Corners
+dnf5 -y install kwin-effect-roundcorners
+dnf5 copr disable matinlotfali/KDE-Rounded-Corners
+
 dnf5 -y group install --with-optional virtualization
 
 #dnf5 -y install xcb-util-cursor # fix amnezia vpn work
