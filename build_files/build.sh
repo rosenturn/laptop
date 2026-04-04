@@ -21,9 +21,9 @@ set -ouex pipefail
 
 dnf5 -y remove firefox # instead install flathub version
 
-# dnf5 -y copr enable deltacopy/darkly
-# dnf5 -y install darkly
-# dnf5 -y copr disable deltacopy/darkly
+dnf5 -y copr enable deltacopy/darkly
+dnf5 -y install darkly
+dnf5 -y copr disable deltacopy/darkly
 
 dnf5 -y copr enable matinlotfali/KDE-Rounded-Corners
 dnf5 -y install kwin-effect-roundcorners
