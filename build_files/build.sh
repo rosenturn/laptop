@@ -15,8 +15,8 @@ set -ouex pipefail
 
 # this installs a package from fedora repos 
 
-dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf5 -y config-manager setopt fedora-cisco-openh264.enabled=1
+#dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+#dnf5 -y config-manager setopt fedora-cisco-openh264.enabled=1
 
 
 dnf5 -y remove firefox # instead install flathub version
@@ -31,13 +31,13 @@ dnf5 -y remove firefox # instead install flathub version
 
 dnf5 -y group install --with-optional virtualization
 
-dnf5 -y install VirtualBox
+#dnf5 -y install VirtualBox
 
 dnf5 -y install xcb-util-cursor # fix amnezia vpn work
 dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
 dnf5 -y install wireshark
 
-dnf5 -y install steam
+# dnf5 -y install steam
 
 #rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
 #echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
