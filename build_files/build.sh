@@ -37,7 +37,7 @@ dnf5 -y install xcb-util-cursor # fix amnezia vpn work
 dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
 dnf5 -y install wireshark
 
-dnf5 -y install steam
+#dnf5 -y install steam
 
 tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
 [gitlab.com_paulcarroty_vscodium_repo]
