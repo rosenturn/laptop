@@ -21,23 +21,24 @@ set -ouex pipefail
 
 dnf5 -y remove firefox # instead install flathub version
 
-# dnf5 -y copr enable deltacopy/darkly
-# dnf5 -y install darkly
-# dnf5 -y copr disable deltacopy/darkly
+dnf5 -y copr enable deltacopy/darkly
+dnf5 -y install darkly
+dnf5 -y copr disable deltacopy/darkly
 
-# dnf5 -y copr enable matinlotfali/KDE-Rounded-Corners
-# dnf5 -y install kwin-effect-roundcorners
-# dnf5 -y copr disable matinlotfali/KDE-Rounded-Corners
+dnf5 -y copr enable matinlotfali/KDE-Rounded-Corners
+dnf5 -y install kwin-effect-roundcorners
+dnf5 -y copr disable matinlotfali/KDE-Rounded-Corners
 
 dnf5 -y group install --with-optional virtualization
 
 # dnf5 -y install VirtualBox
 
-dnf5 -y install xcb-util-cursor # fix amnezia vpn work
-dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
+#dnf5 -y install xcb-util-cursor # fix amnezia vpn work
+#dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
 dnf5 -y install wireshark
 
-dnf5 -y install gamescope
+#dnf5 -y install gamescope
+dnf5 -y install steam
 
 tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
 [gitlab.com_paulcarroty_vscodium_repo]
