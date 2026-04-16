@@ -19,7 +19,7 @@ set -ouex pipefail
 #dnf5 -y config-manager setopt fedora-cisco-openh264.enabled=1
 
 
-dnf5 -y remove firefox # instead install flathub version
+#dnf5 -y remove firefox # instead install flathub version
 
 dnf5 -y copr enable deltacopy/darkly
 dnf5 -y install darkly
