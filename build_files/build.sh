@@ -63,7 +63,7 @@ dnf5 -y install codium
 
 # fc-cache -fv
 
-update-ca-trust
+#update-ca-trust
 
 
 # Use a COPR Example:
