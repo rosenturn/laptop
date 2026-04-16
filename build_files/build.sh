@@ -31,6 +31,8 @@ dnf5 -y copr disable matinlotfali/KDE-Rounded-Corners
 
 dnf5 -y group install --with-optional virtualization
 
+dnf5 -y install steam
+
 # dnf5 -y install VirtualBox
 
 #dnf5 -y install xcb-util-cursor # fix amnezia vpn work
