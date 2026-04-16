@@ -37,7 +37,7 @@ dnf5 -y group install --with-optional virtualization
 #dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
 dnf5 -y install wireshark
 
-#dnf5 -y install gamescope
+# dnf5 -y install gamescope
 # dnf5 -y install steam
 
 tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
