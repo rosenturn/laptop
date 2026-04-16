@@ -38,7 +38,7 @@ dnf5 -y group install --with-optional virtualization
 dnf5 -y install wireshark
 
 #dnf5 -y install gamescope
-dnf5 -y install steam
+# dnf5 -y install steam
 
 tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
 [gitlab.com_paulcarroty_vscodium_repo]
