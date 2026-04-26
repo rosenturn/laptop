@@ -21,43 +21,43 @@ set -ouex pipefail
 
 #dnf5 -y remove firefox # instead install flathub version
 
-dnf5 -y copr enable deltacopy/darkly
-dnf5 -y install darkly
-dnf5 -y copr disable deltacopy/darkly
+# dnf5 -y copr enable deltacopy/darkly
+# dnf5 -y install darkly
+# dnf5 -y copr disable deltacopy/darkly
 
-dnf5 -y copr enable matinlotfali/KDE-Rounded-Corners
-dnf5 -y install kwin-effect-roundcorners
-dnf5 -y copr disable matinlotfali/KDE-Rounded-Corners
+# dnf5 -y copr enable matinlotfali/KDE-Rounded-Corners
+# dnf5 -y install kwin-effect-roundcorners
+# dnf5 -y copr disable matinlotfali/KDE-Rounded-Corners
 
 dnf5 -y group install --with-optional virtualization
 
-dnf5 -y install steam
+# dnf5 -y install steam
 
 # dnf5 -y install VirtualBox
 
 #dnf5 -y install xcb-util-cursor # fix amnezia vpn work
 #dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
-dnf5 -y install wireshark
+# dnf5 -y install wireshark
 
 # dnf5 -y install gamescope
 # dnf5 -y install steam
 
-tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
-[gitlab.com_paulcarroty_vscodium_repo]
-name=gitlab.com_paulcarroty_vscodium_repo
-baseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/
-enabled=1
-gpgcheck=1
-repo_gpgcheck=1
-gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
-metadata_expire=1h
-EOF
+# tee -a /etc/yum.repos.d/vscodium.repo << 'EOF'
+# [gitlab.com_paulcarroty_vscodium_repo]
+# name=gitlab.com_paulcarroty_vscodium_repo
+# baseurl=https://paulcarroty.gitlab.io/vscodium-deb-rpm-repo/rpms/
+# enabled=1
+# gpgcheck=1
+# repo_gpgcheck=1
+# gpgkey=https://gitlab.com/paulcarroty/vscodium-deb-rpm-repo/raw/master/pub.gpg
+# metadata_expire=1h
+# EOF
 
-dnf5 -y install codium
+# dnf5 -y install codium
 
-#rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
-#echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
-#dnf5 -y install code
+rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
+echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+dnf5 -y install code
 
 # dnf5 -y install curl cabextract xorg-x11-font-utils fontconfig
 
