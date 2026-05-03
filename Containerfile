@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/ublue-os/silverblue-nvidia:44
+FROM ghcr.io/ublue-os/kinoite-nvidia:44
 
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
