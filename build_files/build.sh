@@ -35,8 +35,8 @@ dnf5 -y group install --with-optional virtualization
 
 # dnf5 -y install VirtualBox
 
-#dnf5 -y install xcb-util-cursor # fix amnezia vpn work
-#dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
+dnf5 -y install xcb-util-cursor # fix amnezia vpn work
+dnf5 -y install adw-gtk3-theme # fix gtk3 with libadwaita
 # dnf5 -y install wireshark
 
 # dnf5 -y install gamescope
