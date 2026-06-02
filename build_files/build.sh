@@ -23,12 +23,6 @@ echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com
 dnf5 -y install code
 
 
-dnf5 -y install https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-dnf5 -y install xorg-x11-drv-nvidia-cuda
-dnf5 -y install libva-nvidia-driver libva-utils vdpauinfo
-dnf5 -y remove rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
