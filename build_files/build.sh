@@ -22,12 +22,6 @@ rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
 echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 dnf5 -y install code
 
-cd /tmp
-wget https://storage.sota.ac/api/v1/public/storage/sotavpn-latest-x64.rpm
-dnf5 -y install ./sotavpn-latest-x64.rpm
-cd
-
-
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
