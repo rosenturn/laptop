@@ -17,6 +17,9 @@ dnf5 -y group install --with-optional virtualization
 dnf5 -y install xcb-util-cursor # fix amnezia vpn work
 dnf5 -y install android-tools
 dnf5 -y install rpm-build rpmrebuild
+cd /tmp && wget https://storage.sota.ac/api/v1/public/storage/sotavpn-latest-x64.rpm
+dnf5 -y install ./sotavpn-latest-x64.rpm
+cd
 # dnf5 -y install wireshark
 
 rpm --import https://packages.microsoft.com/keys/microsoft.asc &&
