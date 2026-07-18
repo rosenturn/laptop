@@ -29,6 +29,8 @@ dnf5 -y install niri
 dnf5 -y install --nogpgcheck --repofrompath 'terra,https://repos.fyralabs.com/terra$releasever' terra-release
 dnf5 -y install noctalia-shell
 
+dnf5 -y install noctalia
+
 # dnf -y install steam gamescope
 
 #### Example for enabling a System Unit File
