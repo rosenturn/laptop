@@ -35,7 +35,7 @@ dnf5 -y copr disable deltacopy/darkly
 
 # dnf5 -y install noctalia
 
-# dnf -y install steam gamescope
+dnf -y install steam gamescope
 
 #### Example for enabling a System Unit File
 
