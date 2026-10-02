@@ -40,6 +40,8 @@ dnf5 -y install code
 
 dnf -y install steam gamescope
 
+dnf -y install kmodtoolakmod
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
